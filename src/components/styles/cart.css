@@ -1,0 +1,97 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.contendor-carrito {
+    width:98%;
+    margin-top: 2rem;
+    background-color:greenyellow;
+}
+
+.map-carrito{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+.image-carrito{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    border-bottom: 2px solid black;
+    padding: 1rem;
+}
+
+.image-carrito h2{
+    padding: 1rem;
+}
+
+.image-carrito img{
+    width: 10rem;
+}
+
+.cantidad {
+    padding: 1rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.quitar {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    outline: none;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    letter-spacing: 0.2rem;
+}
+
+.quitar:hover{
+    background-color: crimson;
+    color: black;
+    font-weight: bold;
+}
+
+.precio-carrito{
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.total{
+    width: 60%;
+    margin-left: 17.8rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: space-around;
+}
+
+.total-euros{
+    font-weight: bold;
+}
+
+.llevar-login{
+    text-align: center;
+}
+
+.llevar-login button{
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: black;
+    color: white;
+}
+
+.llevar-login button:hover{
+    background-color: blue;
+}

@@ -1,0 +1,43 @@
+Rutas : 
+
+Ruta Usuario
+app.use("/api/usuario", rutaUser);
+
+Ruta productos(los zapatos)
+app.use("/api/productos", rutaShoe);
+
+USUARIO : 
+/api/usuario/ -> get para ver todos
+/api/usuario/:id -> get para ver el usuario en concreto
+/api/usuario/ -> post para crear el usuario con la contraseña encriptada
+/api/usuario/:id -> put para editar el usuario mediante su id
+/api/usuario/:id -> delete , para eliminar el usuario concreto mediante su id
+api/usuario/login -> post para entrar el login
+
+*El usuario no puede tramitar el pedido hasta que no este logeado. Si no esta logeado cuando pulse el boton tramitar pedido se le lleva a la pagina de login**
+
+api/usuario/:id/ver_carrito -> get , para ver el carrito del usuario , mediante su id 
+api/usuario/:id/ver_carrito -> put , para editar el carrito del usuario , se ejecuta cuando pulsamos el boton add to cart , y se añade al array carrito del usuario
+/api/usuario/carrito -> delete para quitar el producto(zapato) del carrito del array del usuario cuando pulsamos el boton quitar
+
+Productos( Ruta : SHOE)
+/api/productos/ -> get para ver todos los Zapatos
+/api/productos/:id -> get para ver el zapato en concreto
+-------De aqui en adelante el usuario no puede hacer nada------
+/api/productos/ -> post para crear el zapato (el usuario no lo puede crear)
+/api/productos/:id -> patch , para editar el zapato concreto
+/api/productos/cantidad -> put , no habia creado en campo cantidad , entonces cree este ruta para añadir el campo de cantidad a todos los zapato.
+
+/api/productos/:id -> delete , para eliminar el zapato concreto
+/api/productos/search/:search -> get de buscador , para ver los zapatos mediante su nombre , esta en el Navbar.
+
+
+---Login de usuario---
+-------Fran----- 
+apellidos : "Davila"
+edad : "65"
+email : "frandavila@react.com"
+nombre : "Fran"
+password : "Mrfran1234!"
+telefono : "123456789"
+

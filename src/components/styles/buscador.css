@@ -1,0 +1,23 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+h1{
+    font-size: large;
+    font-weight: bold;
+    font-style: italic;
+    color: gold;
+}
+
+.buscador li{
+    list-style: none;
+    color: gold;
+}
+
+.buscador ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

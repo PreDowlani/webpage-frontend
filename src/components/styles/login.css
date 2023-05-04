@@ -1,0 +1,83 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.contenedor-login {
+    margin: 2rem;
+    background-color: black;
+}
+
+.formulario-login{
+    color: gold;
+    padding: 2.5rem;
+    margin-top: 5rem;
+    border: 5px solid gold;
+    background-color: black;
+}
+
+.formulario-login h1 {
+    text-align: center;
+    text-decoration: underline;
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.form-login{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.form-enviar{
+    padding: 1rem;
+    border: none;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.alta {
+    margin-top: 5rem;
+    color: white;
+}
+
+.pulse{
+    color: greenyellow;
+}
+
+
+
+/* -------FORMULARIO - SIGNUP */
+
+.contenedor-signup{
+    width: 98%;
+    margin-top: 2rem;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: black;
+}
+
+.form-alta{
+    color: greenyellow;
+}
+
+ input{
+    padding: 0.3rem;
+}
+
+.fallo{
+    color: white;
+}
+
+.mensajeCreado{
+    font-size:2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+    color: greenyellow;
+    text-align: center;
+    
+}
