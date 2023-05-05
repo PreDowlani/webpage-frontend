@@ -31,7 +31,7 @@ const Carrito = ({ cart, setCart, cartData, setCartData, estaLogeado }) => {
     await axios
       .get(
         process.env.REACT_APP_BACKEND +
-          `/usuario/${extraerDatosDeUsuario()[1]}/ver_carrito`,
+          `/api/usuario/${extraerDatosDeUsuario()[1]}/ver_carrito`,
         {
           headers: {
             Authorization: "Bearer " + extraerDatosDeUsuario()[0], // En los headers van 'Bearer ' + token recibido
@@ -56,7 +56,7 @@ const Carrito = ({ cart, setCart, cartData, setCartData, estaLogeado }) => {
     await axios
       .delete(
         process.env.REACT_APP_BACKEND +
-          `/usuario/${extraerDatosDeUsuario()[1]}/carrito`,
+          `/api/usuario/${extraerDatosDeUsuario()[1]}/carrito`,
         {
           data: {
             id: idDelZapato, //al hacer click automaticamente elimina el id del zapato del carrito de usuario
