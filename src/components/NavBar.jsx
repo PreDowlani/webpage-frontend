@@ -3,11 +3,13 @@ import { NavLink } from "react-router-dom";
 import emoji from "../images/emoji.png";
 import axios from "axios";
 import Buscador from "./Buscador";
+import { FiMenu } from "react-icons/fi";
 import("boxicons");
 
 const NavBar = ({ size, estaLogeado }) => {
   const [buscar, setBuscar] = useState("");
   const [results, setResults] = useState([]);
+  const [mostratMenu, setMostrarMenu] = useState(false);
 
   const gestorBuscar = (event) => {
     setBuscar(event.target.value);
@@ -37,7 +39,7 @@ const NavBar = ({ size, estaLogeado }) => {
           <NavLink to={"/"}></NavLink>
         </div>
       </NavLink>
-      <ul>
+      <ul className={mostratMenu ? "menu" : "nomenu"}>
         <li className="links">
           <NavLink
             className={({ isActive }) => (isActive ? "activo" : "noactivo")}
@@ -62,7 +64,7 @@ const NavBar = ({ size, estaLogeado }) => {
             Contacto
           </NavLink>
         </li>
-        <li>
+        <li className="search">
           <input
             type="text"
             name="buscar"
@@ -106,6 +108,9 @@ const NavBar = ({ size, estaLogeado }) => {
           </NavLink>
         </li>
       </div>
+      <button className="menu-btn" onClick={() => setMostrarMenu(!mostratMenu)}>
+        <FiMenu />
+      </button>
     </div>
   );
 };

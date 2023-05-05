@@ -20,7 +20,7 @@ const FormularioAlta = () => {
   const gestorFormulario = async (data) => {
     console.log(data);
     await axios
-      .post(process.env.REACT_APP_BACKEND + "/api/usuario", {
+      .post(process.env.REACT_APP_BACKEND + "/usuario", {
         nombre: data.nombre,
         apellidos: data.apellidos,
         edad: data.edad,

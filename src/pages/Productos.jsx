@@ -8,7 +8,7 @@ const Productos = ({ addToCart, cartData, setCartData }) => {
 
   useEffect(() => {
     axios
-      .get(process.env.REACT_APP_BACKEND + "/api/productos")
+      .get(process.env.REACT_APP_BACKEND + "/productos")
       .then((respuesta) => {
         setZapatos(respuesta.data.zapatos);
       })
@@ -30,7 +30,7 @@ const Productos = ({ addToCart, cartData, setCartData }) => {
     await axios
       .put(
         process.env.REACT_APP_BACKEND +
-          `/api/usuario/${
+          `/usuario/${
             extraerDatosDeUsuario()[1] //aqui es como poner el id del usuario
           }/ver_carrito`,
         {

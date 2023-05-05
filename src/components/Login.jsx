@@ -18,7 +18,7 @@ const Login = () => {
 
   const gestorFormulario = async (data) => {
     await axios
-      .post(process.env.REACT_APP_BACKEND + "/api/usuario/login", {
+      .post(process.env.REACT_APP_BACKEND + "/usuario/login", {
         email: data.email,
         password: data.password,
       })
@@ -100,14 +100,6 @@ const Login = () => {
             Login
           </button>
         </form>
-        <div className="alta">
-          <h2>
-            No tienes cuenta con nosotros{" "}
-            <Link to={"/signup"} className="pulse">
-              Pulse aqui
-            </Link>{" "}
-          </h2>
-        </div>
       </div>
     </div>
   );
