@@ -50,6 +50,16 @@ const NavBar = ({ size, estaLogeado }) => {
         {menuOpen ? (
           <ul className="menu-hamb">
             <li>
+              <input
+                type="text"
+                name="buscar"
+                id="buscar"
+                placeholder="buscador"
+                onChange={gestorBuscar}
+              />
+              <Buscador results={results} />
+            </li>
+            <li>
               <NavLink
                 className={({ isActive }) => (isActive ? "activo" : "noactivo")}
                 to={"/"}
@@ -97,16 +107,7 @@ const NavBar = ({ size, estaLogeado }) => {
                 LogOut
               </NavLink>
             </li>
-            <li>
-              <input
-                type="text"
-                name="buscar"
-                id="buscar"
-                placeholder="buscador"
-                onChange={gestorBuscar}
-              />
-              <Buscador results={results} />
-            </li>
+
             <li className="cart">
               <NavLink to={"/carrito"}>
                 <box-icon name="cart"></box-icon>

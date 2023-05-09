@@ -123,7 +123,6 @@
     height: 3rem;
     margin-top: 0.5rem;
     margin-right: 0.8rem;
-    cursor: pointer;
     background-color: gold;
     color: black;
     font-size: 2rem;
@@ -131,17 +130,30 @@
 
 @media (max-width : 650px) {
     
-      
+      .nav{
+        height: 20vh;
+        text-align: start;
+        
+      }
       .menu-btn{
         display: block;
       }
 
       .menu-hamb{
-       display: flex;
+        position: absolute;
+        top: 7rem;
+        left: 110px;
+        display: flex;
+        flex-direction: column;
+       height: auto;
+       background-color: black;
+       opacity: 0.85;
        align-items: center;
-       justify-content: center;
+       
       }
-      
+      .menu-hamb li {
+    font-size: small;
+      }
 
       .normal-menu {
     display: none ; 
@@ -149,6 +161,10 @@
     
       }
 
+      .info p{
+        font-size:medium;
+        padding: 1rem;
+      }
 
 }
 

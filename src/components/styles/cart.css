@@ -95,3 +95,35 @@
 .llevar-login button:hover{
     background-color: blue;
 }
+
+@media (max-width : 650px) {
+    .total{
+        font-size: 1.2rem;
+    }
+    .total{
+        margin-left: 8rem;   
+    }
+    .map-carrito{
+        width: 100%;
+        padding: 10px;
+    }
+     .image-carrito h2{
+        font-size: medium;
+     }
+
+    .map-carrito img{
+        width: 100px;
+    }
+
+    button.cantidad{
+        width: 30px;
+        height: 30px;
+    }
+
+    .quitar{
+     font-size: small;
+    }
+    .precio-carrito{
+        font-size: large;
+    }
+}
