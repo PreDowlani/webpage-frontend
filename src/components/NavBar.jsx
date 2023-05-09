@@ -9,7 +9,7 @@ import("boxicons");
 const NavBar = ({ size, estaLogeado }) => {
   const [buscar, setBuscar] = useState("");
   const [results, setResults] = useState([]);
-  const [mostratMenu, setMostrarMenu] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const gestorBuscar = (event) => {
     setBuscar(event.target.value);
@@ -39,8 +39,86 @@ const NavBar = ({ size, estaLogeado }) => {
           <NavLink to={"/"}></NavLink>
         </div>
       </NavLink>
-      <ul className={mostratMenu ? "menu" : "nomenu"}>
-        <li className="links">
+      <button
+        className="menu-btn"
+        onClick={() => {
+          setMenuOpen(!menuOpen);
+        }}
+      >
+        {console.log(menuOpen)}
+        <FiMenu />
+        {menuOpen ? (
+          <ul className="menu-hamb">
+            <li>
+              <NavLink
+                className={({ isActive }) => (isActive ? "activo" : "noactivo")}
+                to={"/"}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) => (isActive ? "activo" : "noactivo")}
+                to={"/productos"}
+              >
+                Productos
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) => (isActive ? "activo" : "noactivo")}
+                to={"/contacto"}
+              >
+                Contacto
+              </NavLink>
+            </li>
+            <li className={!estaLogeado ? "activo" : "desaparece"}>
+              <NavLink
+                className={({ isActive }) => (isActive ? "activo" : "noactivo")}
+                to={"/login"}
+              >
+                LogIn
+              </NavLink>
+            </li>
+            <li className={!estaLogeado ? "activo" : "desaparece"}>
+              <NavLink
+                className={({ isActive }) => (isActive ? "activo" : "noactivo")}
+                to={"/singup"}
+              >
+                Singup
+              </NavLink>
+            </li>
+            <li className={estaLogeado ? "activo" : "desaparece"}>
+              <NavLink
+                className={({ isActive }) => (isActive ? "noactivo" : "activo")}
+                to={"/logout"}
+              >
+                LogOut
+              </NavLink>
+            </li>
+            <li>
+              <input
+                type="text"
+                name="buscar"
+                id="buscar"
+                placeholder="buscador"
+                onChange={gestorBuscar}
+              />
+              <Buscador results={results} />
+            </li>
+            <li className="cart">
+              <NavLink to={"/carrito"}>
+                <box-icon name="cart"></box-icon>
+                <span className="total-items">{size}</span>
+              </NavLink>
+            </li>
+          </ul>
+        ) : null}
+      </button>
+
+      <ul className="normal-menu">
+        <li>
           <NavLink
             className={({ isActive }) => (isActive ? "activo" : "noactivo")}
             to={"/"}
@@ -64,25 +142,6 @@ const NavBar = ({ size, estaLogeado }) => {
             Contacto
           </NavLink>
         </li>
-        <li className="search">
-          <input
-            type="text"
-            name="buscar"
-            id="buscar"
-            placeholder="buscador"
-            onChange={gestorBuscar}
-          />
-          <Buscador results={results} />
-          {console.log(results)}
-        </li>
-      </ul>
-      <div className="cart">
-        <NavLink to={"/carrito"}>
-          <box-icon name="cart"></box-icon>
-          <span className="total-items">{size}</span>
-        </NavLink>
-      </div>
-      <div>
         <li className={!estaLogeado ? "activo" : "desaparece"}>
           <NavLink
             className={({ isActive }) => (isActive ? "activo" : "noactivo")}
@@ -107,10 +166,23 @@ const NavBar = ({ size, estaLogeado }) => {
             LogOut
           </NavLink>
         </li>
-      </div>
-      <button className="menu-btn" onClick={() => setMostrarMenu(!mostratMenu)}>
-        <FiMenu />
-      </button>
+        <li>
+          <input
+            type="text"
+            name="buscar"
+            id="buscar"
+            placeholder="buscador"
+            onChange={gestorBuscar}
+          />
+          <Buscador results={results} />
+        </li>
+        <li className="cart">
+          <NavLink to={"/carrito"}>
+            <box-icon name="cart"></box-icon>
+            <span className="total-items">{size}</span>
+          </NavLink>
+        </li>
+      </ul>
     </div>
   );
 };
