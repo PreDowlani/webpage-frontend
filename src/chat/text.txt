@@ -41,3 +41,11 @@ nombre : "Fran"
 password : "Mrfran1234!"
 telefono : "123456789"
 
+----------------------------------------------
+Frontend : 
+https://webpage-frontend-fz61.onrender.com/
+
+Backend : 
+https://backendshoezone.onrender.com
+
+En el backend la ruta buscar - si hay nada , no lo quito porque si no despues tengo problema con el git, asi que no le des importancia !! 
