@@ -59,6 +59,11 @@
     padding: 0.2rem;
 }
 
+.producto-details .tallas{
+ color: white;
+}
+
+
 .producto-details .precio{
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
