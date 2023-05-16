@@ -13,7 +13,7 @@ const PerProduct = ({ zapato, addToCart, añadirAlCarrito }) => {
         <h1>{todosProductos.nombre}</h1>
         <h2>{todosProductos.marca}</h2>
         <p>{todosProductos.categoria}</p>
-        {/* <p>{todosProductos.talla[0]}</p> */}
+        <p>{todosProductos.talla}</p>
         {console.log(todosProductos.talla)}
         <p className="precio"> €{todosProductos.precio}</p>
         <button
