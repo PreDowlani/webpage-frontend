@@ -13,10 +13,16 @@ const PerProduct = ({ zapato, addToCart, añadirAlCarrito }) => {
         <h1>{todosProductos.nombre}</h1>
         <h2>{todosProductos.marca}</h2>
         <p>{todosProductos.categoria}</p>
-        <p className="tallas">
-          Tallas: {todosProductos.tallas[0].tallas}{" "}
-          {todosProductos.tallas[1].tallas}
+        <p className="tallas-btn">
+          {" "}
+          Tallas :
+          <select className="tallas">
+            {todosProductos.tallas.map((todos) => {
+              return <option className="tallas-opt">{todos.tallas}</option>;
+            })}
+          </select>
         </p>
+
         {console.log(todosProductos.tallas)}
         <p className="precio"> €{todosProductos.precio}</p>
         <button

@@ -70,6 +70,7 @@ const Cart = ({
               <div className="image-carrito">
                 <img src={item.image} alt="imagen" key={item.id} />
                 <h2>{item.nombre}</h2>
+                {console.log(item)}
                 <div>
                   <button
                     className="cantidad"

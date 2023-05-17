@@ -61,6 +61,23 @@
 
 .producto-details .tallas{
  color: white;
+ background-color: rgb(58, 151, 243);
+ width: auto;
+ padding: 0.5rem;
+ margin: 0.3rem;
+}
+
+.producto-details .tallas-btn{
+    color: white;
+}
+
+.producto-details .tallas-opt{
+    background-color: gold;
+    color: black;
+}
+
+.producto-details .tallas-opt:hover{
+    color: coral;
 }
 
 
