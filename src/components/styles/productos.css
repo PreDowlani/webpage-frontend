@@ -65,6 +65,9 @@
  width: auto;
  padding: 0.5rem;
  margin: 0.3rem;
+ font-weight: bold;
+ font-size: large;
+ 
 }
 
 .producto-details .tallas-btn{
@@ -72,8 +75,10 @@
 }
 
 .producto-details .tallas-opt{
-    background-color: gold;
+    background-color: white;
     color: black;
+    font-size: large;
+    font-weight: bold;
 }
 
 .producto-details .tallas-opt:hover{

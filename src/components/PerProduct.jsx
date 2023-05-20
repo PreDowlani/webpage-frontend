@@ -1,6 +1,6 @@
 import "./styles/productos.css";
 
-const PerProduct = ({ zapato, addToCart, añadirAlCarrito }) => {
+const PerProduct = ({ zapato, addToCart, añadirAlCarrito, añadirTalla }) => {
   const todosProductos = zapato;
 
   return (
@@ -18,11 +18,20 @@ const PerProduct = ({ zapato, addToCart, añadirAlCarrito }) => {
           Tallas :
           <select className="tallas">
             {todosProductos.tallas.map((todos) => {
-              return <option className="tallas-opt">{todos.tallas}</option>;
+              return (
+                <option
+                  className="tallas-opt"
+                  onClick={() => {
+                    añadirTalla(todosProductos.tallas);
+                    añadirAlCarrito(todosProductos.tallas._id);
+                  }}
+                >
+                  {todos.tallas}
+                </option>
+              );
             })}
           </select>
         </p>
-
         {console.log(todosProductos.tallas)}
         <p className="precio"> €{todosProductos.precio}</p>
         <button

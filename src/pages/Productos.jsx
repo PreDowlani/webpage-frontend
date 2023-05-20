@@ -51,6 +51,7 @@ const Productos = ({ addToCart, cartData, setCartData }) => {
         console.log(error.response.data);
       });
   };
+
   return (
     <div className="map-producto">
       {zapatos.map((zapato) => {
